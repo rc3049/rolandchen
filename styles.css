@@ -213,7 +213,7 @@ p {
 .about-layout {
   display: flex;
   flex-wrap: wrap;
-  align-items: left;
+  align-items: center;
   justify-content: space-between;
   gap: 2rem;
   max-width: 1000px;
