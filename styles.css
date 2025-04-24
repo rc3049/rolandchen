@@ -63,6 +63,7 @@ nav ul li a:hover {
 header {
     position: relative;
     width: 100%;
+    height: 10vh; /* Take up most of the viewport height */
     overflow: hidden;
 }
 
