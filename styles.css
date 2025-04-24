@@ -77,54 +77,40 @@ a:hover {
 
 /* Dropdown menu */
 .dropdown-content {
-  left: 0; /* Aligns directly under the parent item */
-  right: auto; /* Removes previous right alignment */
-  transform: translateY(-10px);
-  list-style: none;
-  margin: 0;
-  padding: 0.5rem 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 120%;
   background-color: #fff;
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  min-width: 180px;
-  opacity: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  min-width: 160px;
+  opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 20;
+  transform: translateY(-5px);
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+  z-index: 100;
+  border: none;
 }
 
-/* Dropdown link */
+/* Dropdown links */
 .dropdown-content a {
-  position: relative;
-  padding: 0.6rem 1rem;
-  color: #333;
+  padding: 0.75rem 1rem;
   text-decoration: none;
-  white-space: nowrap;
-  overflow: hidden;
-  transition: color 0.3s ease;
-}
-
-.dropdown-content a::after {
-  content: "";
-  position: absolute;
-  left: 1rem;
-  bottom: 0.4rem;
-  width: 0;
-  height: 1px;
-  background-color: #333;
-  transition: width 0.3s ease;
+  color: #333;
+  background: transparent;
+  transition: background-color 0.2s ease;
 }
 
 .dropdown-content a:hover {
-  color: #000;
+  background-color: #f0f0f0;
 }
 
-.dropdown-content a:hover::after {
-  width: calc(100% - 2rem); /* respects padding */
+/* Reveal dropdown on hover */
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 
