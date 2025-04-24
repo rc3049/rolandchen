@@ -97,22 +97,34 @@ a:hover {
 
 /* Dropdown link */
 .dropdown-content a {
+  position: relative;
   padding: 0.6rem 1rem;
   color: #333;
   text-decoration: none;
   white-space: nowrap;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.dropdown-content a::after {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  bottom: 0.4rem;
+  width: 0;
+  height: 1px;
+  background-color: #333;
+  transition: width 0.3s ease;
 }
 
 .dropdown-content a:hover {
-  background-color: #f7f7f7;
+  color: #000;
 }
 
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-content {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
+.dropdown-content a:hover::after {
+  width: calc(100% - 2rem); /* respects padding */
 }
+
 
 
 /* Hero Section (Home Page) */
