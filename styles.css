@@ -1,0 +1,113 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px; /* Base font size */
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean, modern font */
+    line-height: 1.5;
+    background-color: #fff; /* Clean white background */
+    color: #333; /* Dark text for readability */
+    padding: 0;
+}
+
+a {
+    color: #333; /* Dark links */
+    text-decoration: none; /* Remove underlines */
+}
+
+a:hover {
+    color: #5c5c5c; /* Subtle hover effect */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #f4f4f4; /* Soft gray */
+    padding: 20px 0;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 30px; /* Spacing between links */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Remove margin on last link */
+}
+
+nav ul li a {
+    font-size: 1.1rem; /* Slightly larger font for navigation */
+    color: #333; /* Dark text for contrast */
+    font-weight: 500; /* Semi-bold for subtle emphasis */
+    text-transform: uppercase; /* Makes it feel intentional and sharp */
+    letter-spacing: 1px; /* Adds subtle spacing for refinement */
+}
+
+nav ul li a:hover {
+    color: #888; /* Lighter gray on hover */
+}
+
+/* Hero Section (Home Page) */
+header {
+    position: relative;
+    width: 100%;
+    height: 60vh; /* Take up most of the viewport height */
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the space without distortion */
+    filter: brightness(0.8); /* Darken image for text readability */
+}
+
+header h1 {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Main Content */
+main {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.125rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* About Section */
+header .about-image {
+    width: 100%;
+    height: auto;
+    object
