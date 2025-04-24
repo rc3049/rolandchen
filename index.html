@@ -1,39 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roland Chen - Home</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roland Chen - Home</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-    
-
 
 <body>
+  <!-- Hamburger Icon -->
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-    <!-- Hamburger Menu Icon -->
-    <div class="menu-toggle" id="menu-toggle">
-        ☰
-    </div>
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="work.html">Work</a></li>
+    </ul>
+  </nav>
 
-    <!-- Sidebar Navigation -->
-    <nav class="sidebar" id="sidebar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="work.html">Work</a></li>
-        </ul>
-    </nav>
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
 
-    <!-- Page Overlay -->
-    <div class="overlay" id="overlay"></div>
+  <header>
+    <h1>Welcome to My Portfolio</h1>
+    <p>Explore my work and learn more about me.</p>
+  </header>
 
-    <!-- Home Page Content -->
-    <!-- Home Page Content -->
+  <main>
+    <img src="images/home-feature.jpg" alt="Featured work or portrait" class="home-feature-image" />
+  </main>
 
+  <!-- JavaScript -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
 
-<main>
-    <!-- Featured image -->
-    <img src="images/home-feature.jpg" alt="Featured work or portrait" class="home-feature-image">
-</main>
-  
+    toggle.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+      overlay.classList.toggle('active');
+    });
+
+    overlay.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+  </script>
+</body>
+</html>
