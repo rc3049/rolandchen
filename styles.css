@@ -217,7 +217,7 @@ p {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  max-width: 2000px;
+  max-width: 1000px;
   margin: 4rem auto;
   padding: 0 2rem;
 }
