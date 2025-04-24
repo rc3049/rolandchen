@@ -1,40 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Work</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Work - Roland Chen</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
+
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="brand"><a href="index.html">Roland Chen</a></div>
+        <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="work.html">Work</a></li>
         </ul>
     </nav>
 
-    <!-- Work Page Content -->
-    <header>
-        <h1>My Work</h1>
-    </header>
-
-    <main class="work-gallery">
-        <section class="work-item">
-            <a href="https://link1.com">
-                <img src="images/work1.jpg" alt="Work 1">
-                <p>Work 1</p>
-            </a>
-        </section>
-        <section class="work-item">
-            <a href="https://link2.com">
-                <img src="images/work2.jpg" alt="Work 2">
-                <p>Work 2</p>
-            </a>
-        </section>
-        <!-- Repeat for 6 works -->
+    <!-- Work Content -->
+    <main class="page-content">
+        <h1>Selected Works</h1>
+        <div class="work-gallery">
+            <div class="work-item">
+                <a href="https://example.com/project1" target="_blank">
+                    <img src="images/work1.jpg" alt="Project 1">
+                    <p>Project 1 Title</p>
+                </a>
+            </div>
+            <div class="work-item">
+                <a href="https://example.com/project2" target="_blank">
+                    <img src="images/work2.jpg" alt="Project 2">
+                    <p>Project 2 Title</p>
+                </a>
+            </div>
+            <!-- Repeat for remaining projects -->
+        </div>
     </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <a href="https://instagram.com/YOUR_USERNAME" target="_blank" class="footer-icon" aria-label="Instagram">
+                <img src="images/instagram-icon.svg" alt="Instagram">
+            </a>
+            <a href="mailto:your.email@example.com" class="footer-icon" aria-label="Email">
+                <img src="images/email-icon.svg" alt="Email">
+            </a>
+        </div>
+    </footer>
+
 </body>
 </html>
