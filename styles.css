@@ -159,10 +159,31 @@ p {
 
 
 /* About Section */
-header .about-image {
-    width: 100%;
-    height: auto;
-    object
+.about-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.about-text {
+  flex: 1 1 45%;
+}
+
+.about-image-container {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.about-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0; /* No rounded edges for refined utility aesthetic */
+}
 
 /* Base Reset */
 body {
