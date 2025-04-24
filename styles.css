@@ -131,6 +131,33 @@ p {
     margin-bottom: 30px;
 }
 
+/* Footer */
+.site-footer {
+  padding: 2rem;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  margin-top: 4rem;
+}
+
+.footer-content {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-icon img {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.2s ease;
+}
+
+.footer-icon img:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+
 /* About Section */
 header .about-image {
     width: 100%;
