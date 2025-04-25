@@ -120,10 +120,10 @@ a:hover {
 .dropdown-content a::after {
   content: "";
   position: absolute;
-  bottom: 0.5rem;
+  bottom: -0.2rem;
   left: 0; /* Align to the left of the text */
   width: 0; /* Start with no width */
-  height: 1px;
+  height: 2px;
   background-color: #333;
   transition: width 0.2s ease;
   display: inline-block; /* Ensure it wraps the text */
