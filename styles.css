@@ -105,7 +105,7 @@ a:hover {
 
 /* Dropdown link styling */
 .dropdown-content a {
-  padding: 0.6rem 1rem;
+  padding: 0.3rem 1rem;
   color: #333;
   text-decoration: none;
   background: none;
@@ -122,16 +122,16 @@ a:hover {
 .dropdown-content a::after {
   content: "";
   position: absolute;
-  bottom: 0.4rem;
-  right: 1rem;
-  width: 0;
+  bottom: 0;
+  right: 0;
   height: 1px;
+  width: 0;
   background-color: #333;
   transition: width 0.2s ease;
 }
 
-.dropdown-content a:hover {
-  color: #000;
+.dropdown-content a:hover::after {
+  width: 100%;
 }
 
 .dropdown-content a:hover::after {
