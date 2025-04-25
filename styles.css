@@ -79,7 +79,7 @@ a:hover {
 .dropdown-content {
   position: absolute;
   top: 100%; /* Align directly below the parent item */
-  right: 0;
+  right: -20%;
   left: auto;
   display: none;
   flex-direction: column;
