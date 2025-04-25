@@ -117,27 +117,24 @@ a:hover {
   line-height: 1.2;
 }
 
-/* Underline tightly around the text */
 .dropdown-content a::after {
   content: "";
   position: absolute;
-  bottom: 0; /* Align to the bottom of the text */
-  left: 0;
+  bottom: 0.4rem;
+  left: 0; /* Align to the left of the text */
+  width: 0; /* Start with no width */
   height: 1px;
   background-color: #333;
   transition: width 0.2s ease;
-  width: 0; /* Start with no width */
+  display: inline-block; /* Ensure it wraps the text */
 }
 
-/* Hover effect */
 .dropdown-content a:hover {
   color: #000;
 }
 
-/* Animate the underline to fill the width of the text */
 .dropdown-content a:hover::after {
-  width: 100%; /* Underline the text width */
-  left: 0; /* Ensure the underline starts from the left edge */
+  width: 100%; /* Makes the underline match the text width */
 }
 
 
