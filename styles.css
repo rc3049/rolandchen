@@ -120,24 +120,46 @@ a:hover {
 }
 
 /* Underline limited to text */
+/* Dropdown link styling */
+.dropdown-content a {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.3rem 1rem;
+  color: #333;
+  text-decoration: none;
+  background: none;
+  position: relative;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: color 0.2s ease;
+  line-height: 1.2;
+}
+
+/* Underline tightly around the text */
 .dropdown-content a::after {
   content: "";
   position: absolute;
   bottom: 0;
+  left: 0;
   right: 0;
   height: 1px;
-  width: 0;
   background-color: #333;
   transition: width 0.2s ease;
+  width: 0; /* Start with no width */
 }
 
+/* Hover effect */
 .dropdown-content a:hover {
   color: #000;
 }
 
+/* Animate the underline to fill the width of the text */
 .dropdown-content a:hover::after {
-  width: 100%;
+  width: 100%; /* Make it match the width of the text */
+  left: 0; /* Align to the left side of the text */
 }
+
 
 /* Animate in each link with delay when dropdown is visible */
 .dropdown:hover .dropdown-content a {
