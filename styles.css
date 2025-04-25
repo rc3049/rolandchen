@@ -79,7 +79,8 @@ a:hover {
 .dropdown-content {
   position: absolute;
   top: 100%; /* Align directly below the parent item */
-  left: -20%; /* Align to the left edge of the parent */
+  right: 0;
+  left: auto;
   display: none;
   flex-direction: column;
   background-color: #fff;
