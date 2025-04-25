@@ -109,6 +109,7 @@ a:hover {
   padding: 0.6rem 1rem;
   color: #333;
   text-decoration: none;
+  text-align: right;  
   background: none;
   position: relative;
   transition: color 0.2s ease;
