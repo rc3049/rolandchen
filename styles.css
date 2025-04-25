@@ -78,29 +78,28 @@ a:hover {
 /* Dropdown menu */
 .dropdown-content {
   position: absolute;
-  top: 100%; /* Align directly below the parent item */
-  right: -22%;
-  left: auto;
-  display: none;
-  flex-direction: column;
+  top: 100%;
+  right: 0;
   background-color: #fff;
   list-style: none;
   margin: 0;
   padding: 0.3rem 0;
   z-index: 100;
   opacity: 0;
+  pointer-events: none;
   transform: translateY(-10px);
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-  border: none; /* Remove the border */
-  box-shadow: none; /* Remove the drop shadow */
+  border: none;
+  box-shadow: none;
   width: max-content;
   white-space: nowrap;
+  text-align: right;
 }
 
 /* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
-  display: flex;
   opacity: 1;
+  pointer-events: auto;
   transform: translateY(0);
 }
 
@@ -109,10 +108,14 @@ a:hover {
   padding: 0.6rem 1rem;
   color: #333;
   text-decoration: none;
-  text-align: right;  
   background: none;
   position: relative;
+  display: block;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: none;
   transition: color 0.2s ease;
+  text-align: right;
 }
 
 /* Hover underline animation */
@@ -120,7 +123,7 @@ a:hover {
   content: "";
   position: absolute;
   bottom: 0.4rem;
-  left: 1rem;
+  right: 1rem;
   width: 0;
   height: 1px;
   background-color: #333;
@@ -135,38 +138,19 @@ a:hover {
   width: calc(100% - 2rem);
 }
 
-/* Cascade effect for links */
-.dropdown-content a {
+/* Animate in each link with delay when dropdown is visible */
+.dropdown:hover .dropdown-content a {
   animation: cascade 0.3s ease-out forwards;
-  opacity: 0;
-  transform: translateY(-10px);
 }
 
-.dropdown-content a:nth-child(1) {
-  animation-delay: 0.1s;
-}
+.dropdown:hover .dropdown-content a:nth-child(1) { animation-delay: 0.05s; }
+.dropdown:hover .dropdown-content a:nth-child(2) { animation-delay: 0.1s; }
+.dropdown:hover .dropdown-content a:nth-child(3) { animation-delay: 0.15s; }
+.dropdown:hover .dropdown-content a:nth-child(4) { animation-delay: 0.2s; }
+.dropdown:hover .dropdown-content a:nth-child(5) { animation-delay: 0.25s; }
+.dropdown:hover .dropdown-content a:nth-child(6) { animation-delay: 0.3s; }
 
-.dropdown-content a:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.dropdown-content a:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-.dropdown-content a:nth-child(4) {
-  animation-delay: 0.4s;
-}
-
-.dropdown-content a:nth-child(5) {
-  animation-delay: 0.5s;
-}
-
-.dropdown-content a:nth-child(6) {
-  animation-delay: 0.6s;
-}
-
-/* Cascade animation definition */
+/* Cascade animation */
 @keyframes cascade {
   0% {
     opacity: 0;
