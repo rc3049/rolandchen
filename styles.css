@@ -113,27 +113,27 @@ a:hover {
   display: inline-block; /* Ensures the effect wraps tightly around the text */
 }
 
-/* Hover dot animation */
+/* Hover oval animation */
 .dropdown-content a::after {
   content: "";
   position: absolute;
   bottom: -0.2rem; /* Adjusted distance between the text and the dot */
   left: 50%; /* Start from the center of the text */
-  width: 0; /* Start with no width */
-  height: 6px; /* Size of the dot */
-  background-color: red; /* Red color for the dot */
-  border-radius: 50%; /* Makes the shape circular */
+  width: 10px; /* Wider width to create oval shape */
+  height: 6px; /* Height smaller than width to create an oval */
+  background-color: red; /* Red color for the oval */
+  border-radius: 50%; /* Makes the shape circular initially */
   transition: width 0.3s ease, left 0.3s ease;
   transform: translateX(-50%); /* Centers the dot */
 }
 
-/* On hover, animate the dot */
+/* On hover, animate the oval */
 .dropdown-content a:hover {
   color: #000;
 }
 
 .dropdown-content a:hover::after {
-  width: 6px; /* The dot will have a fixed size */
+  width: 12px; /* Slightly wider when hovered to enhance the oval effect */
   left: 50%; /* Keep it centered under the text */
 }
 /* Animate in each link with delay when dropdown is visible */
