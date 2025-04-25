@@ -105,9 +105,7 @@ a:hover {
 
 /* Dropdown link styling */
 .dropdown-content a {
-  display: inline-flex;
-  justify-content: flex-end;
-  align-items: center;
+  display: inline-block; /* Make the anchor element fit the text width */
   padding: 0.3rem 1rem;
   color: #333;
   text-decoration: none;
@@ -123,9 +121,8 @@ a:hover {
 .dropdown-content a::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: 0; /* Align to the bottom of the text */
   left: 0;
-  right: 0;
   height: 1px;
   background-color: #333;
   transition: width 0.2s ease;
@@ -139,8 +136,8 @@ a:hover {
 
 /* Animate the underline to fill the width of the text */
 .dropdown-content a:hover::after {
-  width: 100%; /* Make it match the width of the text */
-  left: 0; /* Align to the left side of the text */
+  width: 100%; /* Underline the text width */
+  left: 0; /* Ensure the underline starts from the left edge */
 }
 
 
