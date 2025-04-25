@@ -79,7 +79,7 @@ a:hover {
 .dropdown-content {
   position: absolute;
   top: 100%;
-  right: 0;
+  right: -22%;
   background-color: #fff;
   list-style: none;
   margin: 0;
@@ -105,20 +105,21 @@ a:hover {
 
 /* Dropdown link styling */
 .dropdown-content a {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
   padding: 0.3rem 1rem;
   color: #333;
   text-decoration: none;
   background: none;
   position: relative;
-  display: block;
   opacity: 0;
   transform: translateY(-10px);
-  animation: none;
   transition: color 0.2s ease;
-  text-align: right;
+  line-height: 1.2;
 }
 
-/* Hover underline animation */
+/* Underline limited to text */
 .dropdown-content a::after {
   content: "";
   position: absolute;
@@ -130,12 +131,12 @@ a:hover {
   transition: width 0.2s ease;
 }
 
-.dropdown-content a:hover::after {
-  width: 100%;
+.dropdown-content a:hover {
+  color: #000;
 }
 
 .dropdown-content a:hover::after {
-  width: calc(100% - 2rem);
+  width: 100%;
 }
 
 /* Animate in each link with delay when dropdown is visible */
