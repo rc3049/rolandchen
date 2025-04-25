@@ -122,7 +122,7 @@ a:hover {
   width: 0; /* Start with no width */
   height: 6px; /* Size of the dot */
   background-color: red; /* Red color for the dot */
-  border-radius: 70%; /* Makes the shape circular */
+  border-radius: 20%; /* Makes the shape circular */
   transition: width 0.3s ease, left 0.3s ease;
   transform: translateX(-50%); /* Centers the dot */
 }
