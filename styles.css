@@ -114,7 +114,7 @@ a:hover {
   opacity: 0;
   transform: translateY(-10px);
   transition: color 0.2s ease;
-  line-height: 2;
+  line-height: 1.2;
 }
 
 .dropdown-content a::after {
