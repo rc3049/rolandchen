@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Clean, modern font */
+    font-family: 'IBM Plex Sans', Arial, sans-serif; /* Clean, modern font */
     line-height: 1.5;
     background-color: #fff; /* Clean white background */
     color: #333; /* Dark text for readability */
@@ -79,7 +79,7 @@ a:hover {
 .dropdown-content {
   position: absolute;
   top: 100%;
-  right: -22%;
+  right: -23%;
   background-color: #fff;
   list-style: none;
   margin: 0;
