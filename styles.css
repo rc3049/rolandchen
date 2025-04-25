@@ -120,13 +120,14 @@ a:hover {
 .dropdown-content a::after {
   content: "";
   position: absolute;
-  bottom: -0.1rem;
-  left: 0; /* Align to the left of the text */
+  bottom: -0.1rem; /* Adjusted distance between the text and the underline */
+  left: 50%; /* Start from the center */
   width: 0; /* Start with no width */
-  height: 2px;
+  height: 2px; /* Slightly thicker underline */
   background-color: #333;
-  transition: width 0.2s ease;
+  transition: width 0.3s ease, left 0.3s ease;
   display: inline-block; /* Ensure it wraps the text */
+  transform: translateX(-50%); /* Center the underline */
 }
 
 .dropdown-content a:hover {
@@ -134,7 +135,8 @@ a:hover {
 }
 
 .dropdown-content a:hover::after {
-  width: 100%; /* Makes the underline match the text width */
+  width: 100%; /* Expands to the full width of the text */
+  left: 0; /* Ensures the underline starts from the left edge of the text */
 }
 
 
