@@ -79,14 +79,14 @@ a:hover {
 .dropdown-content {
   position: absolute;
   top: 100%; /* Align directly below the parent item */
-  left: 0; /* Align to the left edge of the parent */
+  left: -20%; /* Align to the left edge of the parent */
   display: none;
   flex-direction: column;
   background-color: #fff;
   min-width: 180px;
   list-style: none;
   margin: 0;
-  padding: 0rem 0;
+  padding: 0.3rem 0;
   z-index: 100;
   opacity: 0;
   transform: translateY(-10px);
@@ -104,7 +104,7 @@ a:hover {
 
 /* Dropdown link styling */
 .dropdown-content a {
-  padding: 0rem 1rem;
+  padding: 0.6rem 1rem;
   color: #333;
   text-decoration: none;
   background: none;
