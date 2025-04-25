@@ -102,44 +102,40 @@ a:hover {
   pointer-events: auto;
   transform: translateY(0);
 }
-
-/* Dropdown link styling */
 .dropdown-content a {
-  display: inline-block; /* Make the anchor element fit the text width */
-  padding: 0.3rem 1rem;
+  padding: 0.6rem 1rem;
   color: #333;
   text-decoration: none;
+  text-align: right;
   background: none;
   position: relative;
-  opacity: 0;
-  transform: translateY(-10px);
   transition: color 0.2s ease;
-  line-height: 1.2;
+  display: inline-block; /* Ensures the effect wraps tightly around the text */
 }
 
+/* Hover dot animation */
 .dropdown-content a::after {
   content: "";
   position: absolute;
-  bottom: -0.1rem; /* Adjusted distance between the text and the underline */
-  left: 50%; /* Start from the center */
+  bottom: -0.2rem; /* Adjusted distance between the text and the dot */
+  left: 50%; /* Start from the center of the text */
   width: 0; /* Start with no width */
-  height: 2px; /* Slightly thicker underline */
-  background-color: #333;
+  height: 6px; /* Size of the dot */
+  background-color: red; /* Red color for the dot */
+  border-radius: 50%; /* Makes the shape circular */
   transition: width 0.3s ease, left 0.3s ease;
-  display: inline-block; /* Ensure it wraps the text */
-  transform: translateX(-50%); /* Center the underline */
+  transform: translateX(-50%); /* Centers the dot */
 }
 
+/* On hover, animate the dot */
 .dropdown-content a:hover {
   color: #000;
 }
 
 .dropdown-content a:hover::after {
-  width: 100%; /* Expands to the full width of the text */
-  left: 0; /* Ensures the underline starts from the left edge of the text */
+  width: 6px; /* The dot will have a fixed size */
+  left: 50%; /* Keep it centered under the text */
 }
-
-
 /* Animate in each link with delay when dropdown is visible */
 .dropdown:hover .dropdown-content a {
   animation: cascade 0.3s ease-out forwards;
