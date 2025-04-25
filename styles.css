@@ -114,13 +114,13 @@ a:hover {
   opacity: 0;
   transform: translateY(-10px);
   transition: color 0.2s ease;
-  line-height: 1.2;
+  line-height: 2;
 }
 
 .dropdown-content a::after {
   content: "";
   position: absolute;
-  bottom: 0.4rem;
+  bottom: 0.5rem;
   left: 0; /* Align to the left of the text */
   width: 0; /* Start with no width */
   height: 1px;
