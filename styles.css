@@ -120,7 +120,7 @@ a:hover {
 .dropdown-content a::after {
   content: "";
   position: absolute;
-  bottom: -0.2rem;
+  bottom: -0.1rem;
   left: 0; /* Align to the left of the text */
   width: 0; /* Start with no width */
   height: 2px;
