@@ -359,9 +359,15 @@ body {
   transform: translateY(-2px);
 }
 
-.description {
-    position: fixed;
-    text-align: center;
+.content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.description p {
+  margin-bottom: 1rem;
 }
 /* Overlay */
 .overlay {
