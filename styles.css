@@ -359,6 +359,10 @@ body {
   transform: translateY(-2px);
 }
 
+.description {
+    position: fixed;
+    text-align: center;
+}
 /* Overlay */
 .overlay {
   position: fixed;
