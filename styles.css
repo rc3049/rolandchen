@@ -379,7 +379,7 @@ body {
 }
 
 /* 11 video styling */
-.11video-wrapper {
+.video-wrapper-11 {
   position: relative;
   padding: 2rem 1rem;
   width: 100%;
@@ -388,13 +388,13 @@ body {
   padding-top: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
 }
 
-.11video-wrapper iframe {
+.video-wrapper-11 iframe {
   position: absolute;
   top: 0%;
   left: 0%;
   width: 100%;
   height: 100%;
   border: none;
-    }
+}
 
     
