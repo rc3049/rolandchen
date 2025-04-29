@@ -390,7 +390,7 @@ body {
 }
 
 /* 11 video styling */
-.video-wrapper-11 {
+.video-wrapper {
   position: relative;
   width: 100%;
   max-width: 800px;
@@ -400,7 +400,7 @@ body {
   background: #000;
 }
 
-.video-wrapper-11 iframe {
+.video-wrapper iframe {
   position: absolute;
   top: 0;
   left: 0;
