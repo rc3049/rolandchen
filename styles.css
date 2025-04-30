@@ -415,21 +415,24 @@ body {
 /*image styling */
 .container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* center images horizontally */
-  align-items: flex-start; /* align to top of container */
-  gap: 2rem; /* spacing between images */
+  flex-direction: column; /* Ensure image and description stack vertically */
+  align-items: center; /* Center everything */
   padding: 2rem;
+  text-align: center; /* Optional: Center the text */
 }
 
-/* Optional styling for the images inside the container */
+/* Optional styling for the image inside the container */
 .container img {
   max-width: 100%;
   height: auto;
-  flex: 1 1 300px; /* allows responsive sizing with min width */
-  object-fit: cover;
-  border-radius: 0.5rem; /* optional rounding */
-  transition: transform 0.3s ease;
+  border-radius: 0.5rem; /* Optional rounding */
+  margin-bottom: 1rem; /* Space between image and text */
+}
+
+/* Styling for the description */
+.description {
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 
