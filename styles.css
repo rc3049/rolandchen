@@ -434,7 +434,7 @@ p {
   grid-template-columns: 2fr 1fr; /* 2 parts for video, 1 part for image */
   gap: 1.5rem;
   padding: 1.5rem;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
