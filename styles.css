@@ -518,17 +518,22 @@ p {
 }
 
 .dphoto-grid .video-wrapper {
-    position: relative;
-    background: #000;
-    overflow: hidden;
+  aspect-ratio: 9 / 16;
+  width: 100%; /* Ensure the container takes up the full width available */
+  position: relative;
+  background: #000;
+  margin: auto;
+  overflow: hidden; /* Prevent overflow */
 }
 
 .dphoto-grid .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover; /* Ensures the iframe fully covers the container without distortion */
 }
+
 
