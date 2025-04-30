@@ -92,4 +92,14 @@
     </footer>
 
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".mobile-menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    toggle.addEventListener("click", function () {
+      navLinks.classList.toggle("mobile-visible");
+    });
+  });
+</script>
 </html>
