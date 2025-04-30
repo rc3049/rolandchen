@@ -389,7 +389,15 @@ body {
   visibility: visible;
 }
 
-/* 11 video styling */
+/* video styling */
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1000px; /* optional, to control width */
+}
 .video-wrapper {
   position: relative;
   width: 100%;
