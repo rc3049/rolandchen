@@ -512,13 +512,13 @@ p {
 }
 
 .dphoto-grid .video-container {
-    aspect-ratio: 10 / 16; 
+    aspect-ratio: 11 / 16; 
     width: 100%; /* Ensure content fills the grid cell */
     height: auto; /* Maintain aspect ratio for images */
 }
 
 .dphoto-grid .video-wrapper {
-  aspect-ratio: 10 / 16;
+  aspect-ratio: 11 / 16;
   width: 100%; /* Ensure the container takes up the full width available */
   position: relative;
   background: #000;
