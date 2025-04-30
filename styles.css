@@ -460,6 +460,7 @@ body {
   justify-content: center; /* Centers the video horizontally */
   margin: 1.5rem auto; /* Optional: adds space around the video */
   width: 100%;
+  padding: 0 1rem; 
 }
 
 .video-wrapper {
