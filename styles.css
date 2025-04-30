@@ -443,16 +443,18 @@ body {
   justify-content: center;
   gap: 2rem;
   margin: 2rem auto;
-  max-width: 1200px;
-  padding: 0 1rem;
+  max-width: 1000px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .video-wrapper {
-  flex: 1 1 100%;
+  position: relative;
+  flex: 1 1 45%;
   max-width: 800px;
   aspect-ratio: 16 / 9;
-  position: relative;
   background: #000;
+  margin: 1rem;
 }
 
 .video-wrapper iframe {
@@ -463,7 +465,6 @@ body {
   height: 100%;
   border: none;
 }
-
 /* Responsive: if there are multiple videos and screen is wide, show side by side */
 @media (min-width: 768px) {
   .video-container .video-wrapper {
