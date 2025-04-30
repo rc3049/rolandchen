@@ -430,6 +430,17 @@ body {
   transition: transform 0.3s ease;
 }
 
+.photo-grid .video-container {
+  width: 100%;
+  grid-column: span 1;
+}
+
+.photo-grid .video-wrapper {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  max-width: 100%;
+}
+
 /*image styling */
 .container {
   display: flex;
