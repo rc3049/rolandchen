@@ -495,13 +495,14 @@ p {
 /* Dumpling Fest Wrapper */
 
 .dphoto-grid {
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 0 2rem; /* 2rem padding on left and right */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Two equal-width columns */
-    gap: 1rem; /* Space between columns */
-    align-items: center; /* Vertically align content */
-    justify-items: center; /* Center content horizontally */
-    margin: 0 auto; /* Center grid horizontally */
-    padding: 0 2rem; /* Optional: Add space around the grid */
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem; /* 1rem gap between grid items */
+    align-items: center;
+    justify-items: center;
 }
 
 
