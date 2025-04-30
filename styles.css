@@ -443,14 +443,14 @@ body {
   justify-content: center;
   gap: 2rem;
   margin: 2rem auto;
-  max-width: 1000px; /* optional, to control width */
+  max-width: 1000px;
 }
+
 .video-wrapper {
   position: relative;
-  width: 100%;
-  max-width: 800px;
-  margin: 1rem auto;
-  aspect-ratio: 16 / 9; /* Ensures a true 16:9 ratio */
+  flex: 1 1 45%; /* allows responsive sizing */
+  min-width: 300px; /* prevent getting too small */
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   background: #000;
 }
