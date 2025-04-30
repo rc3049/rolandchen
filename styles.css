@@ -501,7 +501,7 @@ p {
     align-items: center; /* Vertically align content */
     justify-items: center; /* Center content horizontally */
     margin: 0 auto; /* Center grid horizontally */
-    padding: 2rem; /* Optional: Add space around the grid */
+    padding: 0 2rem; /* Optional: Add space around the grid */
 }
 
 .dphoto-grid .video-container,
