@@ -288,7 +288,7 @@ p {
 }
 /* Work Content */
 .content-wrapper {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 2rem 1rem;
   text-align: center;
@@ -417,7 +417,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
-  padding: 2rem;
+  padding: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -435,7 +435,7 @@ body {
   display: flex;
   flex-direction: column; /* Ensure image and description stack vertically */
   align-items: center; /* Center everything */
-  padding: 2rem;
+  padding: 1.5rem;
   text-align: center; /* Optional: Center the text */
 }
 
@@ -458,7 +458,7 @@ body {
 .video-container {
   display: flex;
   justify-content: center; /* Centers the video horizontally */
-  margin: 2rem auto; /* Optional: adds space around the video */
+  margin: 1.5rem auto; /* Optional: adds space around the video */
   width: 100%;
 }
 
