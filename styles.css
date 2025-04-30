@@ -496,39 +496,27 @@ p {
 
 .dphoto-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    padding: 2rem;
-    margin: 0 auto;
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    gap: 1rem; /* Space between columns */
+    align-items: center; /* Vertically align content */
+    justify-items: center; /* Center content horizontally */
+    margin: 0 auto; /* Center grid horizontally */
+    padding: 2rem; /* Optional: Add space around the grid */
 }
 
-.dphoto-grid img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-/* Video Container and Wrapper */
 .dphoto-grid .video-container,
-.video-container {
-    width: 100%;
-    max-width: 100%;
-    padding: 0 1rem;
+.dphoto-grid img {
+    width: 100%; /* Ensure content fills the grid cell */
+    height: auto; /* Maintain aspect ratio for images */
 }
 
-.dphoto-grid .video-wrapper,
-.video-wrapper {
-    width: 100%;
-    max-width: 100%;
+.dphoto-grid .video-wrapper {
     position: relative;
     background: #000;
     overflow: hidden;
 }
 
-.dphoto-grid .video-wrapper iframe,
-.video-wrapper iframe {
+.dphoto-grid .video-wrapper iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -536,3 +524,4 @@ p {
     height: 100%;
     border: none;
 }
+
