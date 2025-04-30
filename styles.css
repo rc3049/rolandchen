@@ -450,6 +450,7 @@ body {
   max-width: 800px; /* Optional: set a maximum width for the video */
   background: #000; /* Adds a black background to the video area */
   overflow: hidden;
+  aspect-ratio: 16 / 9;
 }
 
 .video-wrapper iframe {
