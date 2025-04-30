@@ -255,6 +255,7 @@ p {
 .about-text,
 .about-image-container {
     flex: 1 1 45%;
+    text-align: left;
 }
 
 .about-image {
