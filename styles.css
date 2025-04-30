@@ -389,6 +389,30 @@ body {
   visibility: visible;
 }
 
+/*image styling */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* center images horizontally */
+  align-items: flex-start; /* align to top of container */
+  gap: 2rem; /* spacing between images */
+  padding: 2rem;
+}
+
+/* Optional styling for the images inside the container */
+.container img {
+  max-width: 100%;
+  height: auto;
+  flex: 1 1 300px; /* allows responsive sizing with min width */
+  object-fit: cover;
+  border-radius: 0.5rem; /* optional rounding */
+  transition: transform 0.3s ease;
+}
+
+.container img:hover {
+  transform: scale(1.02); /* subtle hover effect */
+}
+
 /* video styling */
 .video-container {
   display: flex;
