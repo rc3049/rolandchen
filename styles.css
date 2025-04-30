@@ -59,51 +59,46 @@ a:hover {
 
 /* Dropdown */
 .dropdown {
-    position: relative;
+  position: relative;
+  display: inline-block;
 }
 
+/* Dropdown menu */
 .dropdown-content {
-    position: absolute;
-    top: 100%;
-    right: -23%;
-    background-color: #fff;
-    list-style: none;
-    padding: 0.3rem 0;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-10px);
-    transition: opacity 0.3s, transform 0.3s;
-    width: max-content;
-    text-align: right;
+  position: absolute;
+  top: 100%;
+  right: -23%;
+  background-color: #fff;
+  list-style: none;
+  margin: 0;
+  padding: 0.3rem 0;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  border: none;
+  box-shadow: none;
+  width: max-content;
+  white-space: nowrap;
+  text-align: right;
 }
 
+/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
-
 .dropdown-content a {
-    padding: 0.6rem 1rem;
-    color: #333;
-    text-decoration: none;
-    background: none;
-    position: relative;
-    display: inline-block;
-    transition: color 0.2s ease;
-}
-
-.dropdown-content a::after {
-    content: "";
-    position: absolute;
-    bottom: -0.2rem;
-    left: 50%;
-    width: 0;
-    height: 6px;
-    background-color: red;
-    border-radius: 70%;
-    transition: width 0.3s, left 0.3s;
-    transform: translateX(-50%);
+  padding: 0.6rem 1rem;
+  color: #333;
+  text-decoration: none;
+  text-align: right;
+  background: none;
+  position: relative;
+  transition: color 0.2s ease;
+  display: inline-block; /* Ensures the effect wraps tightly around the text */
 }
 
 .dropdown-content a:hover::after {
