@@ -430,15 +430,28 @@ body {
   transition: transform 0.3s ease;
 }
 
+/* Video container adjustment */
 .photo-grid .video-container {
-  width: 100%;
-  grid-column: span 1;
+  width: 100%; /* Keeps the container width full */
+  max-width: 100%; /* Optional: Add a max-width if you need to constrain it */
+  padding: 0 1rem; /* Optional: Adds space around the video */
 }
 
+/* Video wrapper and aspect ratio control */
 .photo-grid .video-wrapper {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 9; /* Maintains the correct aspect ratio */
+  width: 100%; /* Takes up the full width of the parent */
+  max-width: 100%; /* Prevents it from overflowing */
+}
+
+/* Optional: Ensure the iframe fills the video wrapper */
+.photo-grid .video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 100%;
+  height: 100%;
+  border: none;
 }
 
 /*image styling */
