@@ -443,15 +443,15 @@ body {
   justify-content: center;
   gap: 2rem;
   margin: 2rem auto;
-  max-width: 1000px;
+  max-width: 1200px;
+  padding: 0 1rem;
 }
 
 .video-wrapper {
-  position: relative;
-  flex: 1 1 45%; /* allows responsive sizing */
-  min-width: 300px; /* prevent getting too small */
+  flex: 1 1 100%;
+  max-width: 800px;
   aspect-ratio: 16 / 9;
-  overflow: hidden;
+  position: relative;
   background: #000;
 }
 
@@ -464,4 +464,16 @@ body {
   border: none;
 }
 
+/* Responsive: if there are multiple videos and screen is wide, show side by side */
+@media (min-width: 768px) {
+  .video-container .video-wrapper {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+  }
+
+  .video-container:has(.video-wrapper:nth-child(1):nth-last-child(1)) .video-wrapper {
+    flex: 1 1 100%;
+    max-width: 800px;
+  }
+}
     
