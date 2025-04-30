@@ -54,31 +54,19 @@
 
 </body>
   <!-- JavaScript -->
-  <script>
-    const toggle = document.getElementById('menu-toggle');
-    const sidebar = document.getElementById('sidebar');
-    const overlay = document.getElementById('overlay');
-
-    toggle.addEventListener('click', () => {
-      sidebar.classList.toggle('active');
-      overlay.classList.toggle('active');
-    });
-
-    overlay.addEventListener('click', () => {
-      sidebar.classList.remove('active');
-      overlay.classList.remove('active');
-    });
-  </script>
-  <script>
+<script>
   document.addEventListener("DOMContentLoaded", function () {
     const toggle = document.querySelector(".mobile-menu-toggle");
     const navLinks = document.querySelector(".nav-links");
 
-    toggle.addEventListener("click", function () {
-      navLinks.classList.toggle("mobile-visible");
-    });
+    if (toggle && navLinks) {
+      toggle.addEventListener("click", function () {
+        navLinks.classList.toggle("mobile-visible");
+      });
+    }
   });
 </script>
+
 </body>
 
 </html>
