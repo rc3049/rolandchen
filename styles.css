@@ -504,8 +504,14 @@ p {
     padding: 0 2rem; /* Optional: Add space around the grid */
 }
 
-.dphoto-grid .video-container,
+
 .dphoto-grid img {
+    width: 100%; /* Ensure content fills the grid cell */
+    height: auto; /* Maintain aspect ratio for images */
+}
+
+.dphoto-grid .video-container {
+    aspect-ratio: 9 / 16; 
     width: 100%; /* Ensure content fills the grid cell */
     height: auto; /* Maintain aspect ratio for images */
 }
