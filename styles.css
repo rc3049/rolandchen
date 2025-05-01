@@ -199,42 +199,35 @@ a:hover {
     gap: 1rem;
     width: 100%;
     margin-top: 1rem;
+    position: absolute;  /* Position it absolutely for better control */
+    right: 0;           /* Align to the right of the screen */
+    top: 4rem;          /* Position below the top bar */
+    background-color: white; /* Background color for the menu */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Add shadow for better visibility */
+    padding: 1rem;
+    border-radius: 4px; /* Rounded corners */
   }
 
   .nav-links.mobile-visible {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: auto; /* or a specific width */
-    margin-top: 1rem;
-    position: absolute;
-    right: 1rem; /* Adjust as needed */
-    background: white;
-    padding: 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
+  /* Remove dropdown-specific styles */
   .dropdown-content {
-    position: static;
-    transform: none;
-    opacity: 1;
-    pointer-events: auto;
-    box-shadow: none;
-    padding-left: 1rem;
     display: none;
   }
 
-  .dropdown:hover .dropdown-content {
-    display: block;
+  .nav-links a {
+    padding: 0.5rem;
+    text-align: right;  /* Align text to the right */
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
   }
 
-  .dropdown-content a {
-    display: block;
-    padding: 0.5rem 0;
-  }
-
-  .dropdown-content a::after {
-    bottom: -0.4rem;
+  .nav-links a:hover {
+    color: #555;
   }
 }
 
