@@ -98,17 +98,13 @@ a:hover {
   pointer-events: auto;
   transform: translateY(0);
 }
+/* Dropdown Link Styling */
 .dropdown-content a {
-  padding: 0.6rem 1rem;
-  color: #333;
-  text-decoration: none;
-  text-align: right;
-  background: none;
-  position: relative;
-  transition: color 0.2s ease;
-  display: inline-block; /* Ensures the effect wraps tightly around the text */
+  position: relative; /* Ensure the dot is positioned relative to the link */
+  padding-bottom: 10px; /* Add padding at the bottom of the link for space */
 }
 
+/* Dot Styling using ::after */
 .dropdown-content a::after {
   content: "";
   position: absolute;
@@ -117,20 +113,17 @@ a:hover {
   width: 0; /* Start with no width */
   height: 6px; /* Size of the dot */
   background-color: red; /* Red color for the dot */
-  border-radius: 70%; /* Makes the shape circular */
+  border-radius: 50%; /* Makes the shape circular */
   transition: width 0.3s ease, left 0.3s ease;
   transform: translateX(-50%); /* Centers the dot */
 }
 
-/* On hover, animate the dot */
-.dropdown-content a:hover {
-  color: #000;
+/* Add hover effect to expand the dot */
+.dropdown-content a:hover::after {
+  width: 12px; /* Width of the dot when hovered */
+  left: 50%; /* Ensures it remains centered */
 }
 
-.dropdown-content a:hover::after {
-  width: 6px; /* The dot will have a fixed size */
-  left: 50%; /* Keep it centered under the text */
-}
 
 .dropdown-content a {
   animation: cascade 0.3s ease-out forwards;
