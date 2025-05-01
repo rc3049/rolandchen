@@ -646,13 +646,6 @@ p {
   }
 }
 
-/* -------------------------
-   MOBILE STYLES (≤768px)
-------------------------- */
-
-
-/* Mobile view - hide nav links by default */
-@media screen and (max-width: 768px) {
     .nav-links {
         display: none; /* Hide the navigation links by default */
         flex-direction: column; /* Stack links vertically */
@@ -682,7 +675,7 @@ p {
         opacity: 1; /* Ensure dropdown is visible immediately */
         pointer-events: auto; /* Allow interaction */
     }
-}
+
 
   /* Style dropdown in mobile view */
   .nav-links .dropdown-content {
@@ -699,7 +692,7 @@ p {
   .mobile-menu-toggle::before {
     content: "&#9776;"; /* This renders the hamburger icon */
   }
-}
+
 
 /* Link styles */
 .nav-links a {
@@ -727,10 +720,9 @@ p {
   height: 24px;
 }
 
-/* Mobile footer styling */
-@media (max-width: 768px) {
+
   .site-footer .footer-content {
     flex-direction: column;
     align-items: center;
   }
-}
+
