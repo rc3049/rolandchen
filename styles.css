@@ -654,7 +654,7 @@ p {
         width: 100%;
         background-color: #fff;
         text-align: center;
-        z-index: 10;
+        z-index: 1000;
     }
 
     /* Show the mobile menu when the mobile-menu-toggle is clicked */
