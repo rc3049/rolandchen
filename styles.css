@@ -95,7 +95,7 @@ a:hover {
 
 /* Dropdown Link Styling */
 .dropdown-content a {
-    padding: 0.5rem 0.8rem;
+    padding: 0.6rem 1rem;
     position: relative; /* Ensure ::after is positioned correctly */
     opacity: 0;
     transform: translateY(-10px);
