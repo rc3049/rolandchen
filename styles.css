@@ -49,6 +49,14 @@ a:hover {
     list-style: none;
 }
 
+/* Hide the mobile menu toggle button by default (desktop view) */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
 .nav-links a {
     padding: 0.5rem;
 }
@@ -164,10 +172,6 @@ a:hover {
   }
 }
 
-/* Make hamburger button visible on mobile */
-.mobile-menu-toggle {
-  display: none;
-}
 
 /* Hero Section */
 header {
@@ -646,33 +650,44 @@ p {
 /* -------------------------
    MOBILE STYLES (≤768px)
 ------------------------- */
+
+
+/* Mobile view - hide nav links by default */
 @media (max-width: 768px) {
   .nav-links {
-    display: none; /* Hide nav links by default on mobile */
+    display: none; /* Hide nav links on mobile */
     flex-direction: column;
     gap: 0.5rem;
   }
 
-  /* Show the nav links when the .mobile-visible class is added */
+  /* Display nav links when .mobile-visible is added */
   .nav-links.mobile-visible {
     display: flex;
   }
 
-  /* Show the menu toggle button on mobile */
+  /* Show mobile menu toggle button */
   .mobile-menu-toggle {
     display: block;
-    cursor: pointer;
   }
 
-  /* Optionally, you can style the hamburger icon (three bars) */
+  /* Style dropdown in mobile view */
+  .nav-links .dropdown-content {
+    display: none; /* Hide dropdown by default */
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav-links .dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown when hovering */
+  }
+
+  /* Optionally, you can style the hamburger icon */
   .mobile-menu-toggle::before {
-    content: "&#9776;";
-    font-size: 2rem;
-    color: #333;
+    content: "&#9776;"; /* This renders the hamburger icon */
   }
 }
 
-/* Additional styling for a clean transition */
+/* Link styles */
 .nav-links a {
   text-decoration: none;
   color: #333;
@@ -681,61 +696,36 @@ p {
   display: block;
 }
 
-/* Optional: Mobile-visible transition */
-.nav-links {
-  transition: transform 0.3s ease-in-out;
+/* Dropdown menu styles */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
-  /* Typography tweaks */
-  .content-wrapper h1 {
-    font-size: 1.8rem;
-  }
+/* Hover effect for dropdown */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-  .description,
-  .description2 {
-    font-size: 1rem;
-    padding: 0 1rem;
-  }
+/* Footer styles */
+.site-footer .footer-content {
+  display: flex;
+  gap: 1rem;
+}
 
-  /* Layout spacing */
-  .content-wrapper {
-    padding: 1rem;
-    text-align: center;
-  }
+.footer-icon img {
+  width: 24px;
+  height: 24px;
+}
 
-  .description2 {
-    text-align: left;
-  }
-
-  /* Video wrapper responsiveness */
-  .video-container {
-    padding: 1rem 0;
-  }
-
-  .video-wrapper {
-    aspect-ratio: 16/9;
-    width: 100%;
-    max-width: 100%;
-    position: relative;
-  }
-
-  .video-wrapper iframe {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    border: none;
-  }
-
-  /* Footer responsiveness */
-  .footer-content {
+/* Mobile footer styling */
+@media (max-width: 768px) {
+  .site-footer .footer-content {
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    text-align: center;
-  }
-
-  .footer-content a {
-    margin: 0.5rem;
   }
 }
-
