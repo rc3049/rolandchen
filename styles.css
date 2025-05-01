@@ -556,7 +556,7 @@ p {
   }
 
   .top-nav {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     padding: 1rem;
   }
@@ -564,7 +564,7 @@ p {
 
   .dropdown-content {
     right: 0;
-    text-align: left;
+    text-align: right;
   }
 
   header h1 {
@@ -643,9 +643,7 @@ p {
 
 
     /* Show hamburger icon on mobile */
-    .mobile-menu-toggle {
-        display: block;
-    }
+
 
   .nav-links {
     position: absolute;
@@ -674,7 +672,7 @@ p {
     padding-left: 1rem;
   }
 
-  .dropdown-content li a::after {
+  .dropdown-content a::after {
     bottom: 4px;
   }
 
