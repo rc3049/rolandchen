@@ -647,34 +647,44 @@ p {
    MOBILE STYLES (≤768px)
 ------------------------- */
 @media (max-width: 768px) {
-  /* Navbar adjustments */
   .nav-links {
-    display: none;
+    display: none; /* Hide nav links by default on mobile */
     flex-direction: column;
-    position: absolute;
-    top: 100%; /* position below nav */
-    right: 0;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    border-radius: 0 0 8px 8px;
-    width: 100%;
-    text-align: right;
-    z-index: 999;
+    gap: 0.5rem;
   }
 
+  /* Show the nav links when the .mobile-visible class is added */
   .nav-links.mobile-visible {
     display: flex;
   }
 
-  .menu-toggle {
+  /* Show the menu toggle button on mobile */
+  .mobile-menu-toggle {
     display: block;
     cursor: pointer;
   }
 
-  .dropdown-content {
-    display: none !important;
+  /* Optionally, you can style the hamburger icon (three bars) */
+  .mobile-menu-toggle::before {
+    content: "&#9776;";
+    font-size: 2rem;
+    color: #333;
   }
+}
+
+/* Additional styling for a clean transition */
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+/* Optional: Mobile-visible transition */
+.nav-links {
+  transition: transform 0.3s ease-in-out;
+}
 
   /* Typography tweaks */
   .content-wrapper h1 {
