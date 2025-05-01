@@ -73,55 +73,52 @@ a:hover {
 }
 
 /* Dropdown menu */
+/* Dropdown container */
 .dropdown-content {
   position: absolute;
   top: 100%;
-  right: -23%;
+  right: 0;
   background-color: #fff;
   list-style: none;
   margin: 0;
-  padding: 0.5rem 0.5rem;
+  padding: 0.6rem 0.5rem;
   z-index: 1000;
   opacity: 0;
   pointer-events: none;
   transform: translateY(-10px);
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-  border: none;
-  box-shadow: none;
   width: max-content;
-  white-space: nowrap;
   text-align: right;
 }
 
-/* Dropdown Link Styling */
-.dropdown-content a {
-    padding: 0.2px 0;
-    position: relative; /* Ensure ::after is positioned correctly */
-    opacity: 0;
-    transform: translateY(-10px);
-    animation: cascade 0.3s ease-out forwards;
-}
-
-/* Show Dropdown on Hover */
+/* Reveal dropdown on hover */
 .dropdown:hover .dropdown-content {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
+/* Dropdown link items */
+.dropdown-content a {
+  position: relative; /* Required for ::after positioning */
+  display: inline-block;
+  padding: 0.5rem 0; /* vertical spacing between links */
+  text-decoration: none;
+  color: #000;
+}
 
-/* Dot Styling using ::after */
+/* Decorative red dot */
 .dropdown-content a::after {
-    content: "";
-    position: absolute;
-    bottom: -0.3rem; /* Adjusted distance between the text and the dot */
-    left: 50%; /* Start from the center of the text */
-    width: 0; /* Start with no width */
-    height: 6px; /* Size of the dot */
-    background-color: red; /* Red color for the dot */
-    border-radius: 50%; /* Makes the shape circular */
-    transition: width 0.3s ease, left 0.3s ease;
-    transform: translateX(-50%); /* Centers the dot */
+  content: "";
+  position: absolute;
+  bottom: 0; /* Closely below the text */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 6px;
+  background-color: red;
+  border-radius: 50%;
+  transition: width 0.3s ease;
 }
 
 /* Hover Effect for the Dot */
