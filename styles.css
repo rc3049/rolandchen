@@ -108,7 +108,7 @@ a:hover {
 }
 
 .dropdown-content a + a {
-  margin-top: 0.5rem;
+  margin-top: 0.2rem;
 }
 
 /* Decorative red dot */
