@@ -28,6 +28,7 @@ a:hover {
 }
 
 /* Navigation Bar */
+/* Top Navigation Bar */
 .top-nav {
     display: flex;
     justify-content: space-between;
@@ -43,126 +44,135 @@ a:hover {
     color: #333;
 }
 
+/* Nav Links */
 .nav-links {
     display: flex;
     gap: 2rem;
     list-style: none;
 }
 
-/* Hide the mobile menu toggle button by default (desktop view) */
+/* Hide mobile menu toggle button by default (desktop view) */
 .mobile-menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-}
-.nav-links a {
-    padding: 0.5rem;
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
+/* Link Styling */
+.nav-links a {
+    padding: 0.5rem;
+    position: relative; /* Ensure the ::after dot is positioned correctly */
+}
+
+/* Hover State for Links */
 .nav-links a:hover {
     color: #555;
 }
 
-/* Dropdown */
+/* Dropdown Container */
 .dropdown {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
-/* Dropdown menu */
+/* Dropdown Menu */
 .dropdown-content {
-  position: absolute;
-  top: 100%;
-  right: -23%;
-  background-color: #fff;
-  list-style: none;
-  margin: 0;
-  padding: 0.3rem 0;
-  z-index: 100;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-  border: none;
-  box-shadow: none;
-  width: max-content;
-  white-space: nowrap;
-  text-align: right;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    list-style: none;
+    margin: 0;
+    padding: 0.3rem 0;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    border: none;
+    box-shadow: none;
+    width: max-content;
+    white-space: nowrap;
+    text-align: left; /* Align dropdown content to the left */
 }
 
-/* Show dropdown on hover */
+/* Show Dropdown on Hover */
 .dropdown:hover .dropdown-content {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
 }
+
 /* Dropdown Link Styling */
 .dropdown-content a {
-  position: relative; /* Ensure the dot is positioned relative to the link */
-  padding-bottom: 10px; /* Add padding at the bottom of the link for space */
+    padding: 10px 20px;
+    position: relative; /* Ensure ::after is positioned correctly */
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: cascade 0.3s ease-out forwards;
 }
 
 /* Dot Styling using ::after */
 .dropdown-content a::after {
-  content: "";
-  position: absolute;
-  bottom: -0.2rem; /* Adjusted distance between the text and the dot */
-  left: 50%; /* Start from the center of the text */
-  width: 0; /* Start with no width */
-  height: 6px; /* Size of the dot */
-  background-color: red; /* Red color for the dot */
-  border-radius: 50%; /* Makes the shape circular */
-  transition: width 0.3s ease, left 0.3s ease;
-  transform: translateX(-50%); /* Centers the dot */
+    content: "";
+    position: absolute;
+    bottom: -0.2rem; /* Adjusted distance between the text and the dot */
+    left: 50%; /* Start from the center of the text */
+    width: 0; /* Start with no width */
+    height: 6px; /* Size of the dot */
+    background-color: red; /* Red color for the dot */
+    border-radius: 50%; /* Makes the shape circular */
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%); /* Centers the dot */
 }
 
-/* Add hover effect to expand the dot */
+/* Hover Effect for the Dot */
 .dropdown-content a:hover::after {
-  width: 12px; /* Width of the dot when hovered */
-  left: 50%; /* Ensures it remains centered */
+    width: 12px; /* Width of the dot when hovered */
+    left: 50%; /* Ensures it remains centered */
 }
 
-
-.dropdown-content a {
-  animation: cascade 0.3s ease-out forwards;
-  opacity: 0;
-  transform: translateY(-10px);
-}
-
+/* Animation for the Dropdown Links (Cascade) */
 .dropdown-content a:nth-child(1) {
-  animation-delay: 0.1s;
+    animation-delay: 0.1s;
 }
+
 .dropdown-content a:nth-child(2) {
-  animation-delay: 0.2s;
+    animation-delay: 0.2s;
 }
+
 .dropdown-content a:nth-child(3) {
-  animation-delay: 0.3s;
+    animation-delay: 0.3s;
 }
 
 .dropdown-content a:nth-child(4) {
-  animation-delay: 0.4s;
+    animation-delay: 0.4s;
 }
 
 .dropdown-content a:nth-child(5) {
-  animation-delay: 0.5s;
+    animation-delay: 0.5s;
 }
 
 .dropdown-content a:nth-child(6) {
-  animation-delay: 0.6s;
+    animation-delay: 0.6s;
 }
 
-/* Cascade animation definition */
+.dropdown-content a:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+/* Cascade Animation Definition */
 @keyframes cascade {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
