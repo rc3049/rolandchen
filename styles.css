@@ -80,7 +80,7 @@ a:hover {
   background-color: #fff;
   list-style: none;
   margin: 0;
-  padding: 0.8rem 0;
+  padding: 0.8rem 0.8rem;
   z-index: 1000;
   opacity: 0;
   pointer-events: none;
@@ -126,7 +126,7 @@ a:hover {
 
 /* Hover Effect for the Dot */
 .dropdown-content a:hover::after {
-    width: 12px; /* Width of the dot when hovered */
+    width: 8px; /* Width of the dot when hovered */
     left: 50%; /* Ensures it remains centered */
 }
 
