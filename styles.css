@@ -28,7 +28,6 @@ a:hover {
 }
 
 /* Navigation Bar */
-/* Top Navigation Bar */
 .top-nav {
     display: flex;
     justify-content: space-between;
@@ -44,60 +43,54 @@ a:hover {
     color: #333;
 }
 
-/* Nav Links */
 .nav-links {
     display: flex;
     gap: 2rem;
     list-style: none;
 }
 
-/* Hide mobile menu toggle button by default (desktop view) */
+/* Hide the mobile menu toggle button by default (desktop view) */
 .mobile-menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
 }
-
-/* Link Styling */
 .nav-links a {
     padding: 0.5rem;
-    position: relative; /* Ensure the ::after dot is positioned correctly */
 }
 
-/* Hover State for Links */
 .nav-links a:hover {
     color: #555;
 }
 
-/* Dropdown Container */
+/* Dropdown */
 .dropdown {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
-/* Dropdown Menu */
+/* Dropdown menu */
 .dropdown-content {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-    list-style: none;
-    margin: 0;
-    padding: 0.3rem 0;
-    z-index: 100;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-    border: none;
-    box-shadow: none;
-    width: max-content;
-    white-space: nowrap;
-    text-align: left; /* Align dropdown content to the left */
+  position: absolute;
+  top: 100%;
+  right: -23%;
+  background-color: #fff;
+  list-style: none;
+  margin: 0;
+  padding: 0.3rem 0;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  border: none;
+  box-shadow: none;
+  width: max-content;
+  white-space: nowrap;
+  text-align: right;
 }
-
 /* Show Dropdown on Hover */
 .dropdown:hover .dropdown-content {
     opacity: 1;
