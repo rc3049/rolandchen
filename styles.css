@@ -171,7 +171,8 @@ a:hover {
 
 @media (max-width: 768px) {
   .top-nav {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: stretch;
     padding: 1rem;
   }
