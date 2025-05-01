@@ -169,71 +169,6 @@ a:hover {
   display: none;
 }
 
-@media (max-width: 768px) {
-  .top-nav {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: stretch;
-    padding: 1rem;
-  }
-
-  .top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-
-  .mobile-menu-toggle {
-    display: block;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    color: #333;
-    cursor: pointer;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%; /* Just under nav */
-    right: 0;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    border-radius: 0 0 8px 8px;
-    width: 100%;
-    text-align: right;
-  }
-
-
-
-  .nav-links.mobile-visible {
-    display: flex;
-  }
-
-  /* Remove dropdown-specific styles */
-  .dropdown-content {
-    display: none;
-  }
-
-  .nav-links a {
-    padding: 0.5rem;
-    text-align: right;  /* Align text to the right */
-    color: #333;
-    font-size: 1.2rem;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-
-  .nav-links a:hover {
-    color: #555;
-  }
-}
-
-
-
 /* Hero Section */
 header {
     position: relative;
@@ -705,6 +640,92 @@ p {
   iframe {
     max-width: 100%;
     height: auto;
+  }
+}
+
+/* -------------------------
+   MOBILE STYLES (≤768px)
+------------------------- */
+@media (max-width: 768px) {
+  /* Navbar adjustments */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* position below nav */
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+    width: 100%;
+    text-align: right;
+    z-index: 999;
+  }
+
+  .nav-links.mobile-visible {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .dropdown-content {
+    display: none !important;
+  }
+
+  /* Typography tweaks */
+  .content-wrapper h1 {
+    font-size: 1.8rem;
+  }
+
+  .description,
+  .description2 {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  /* Layout spacing */
+  .content-wrapper {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .description2 {
+    text-align: left;
+  }
+
+  /* Video wrapper responsiveness */
+  .video-container {
+    padding: 1rem 0;
+  }
+
+  .video-wrapper {
+    aspect-ratio: 16/9;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: none;
+  }
+
+  /* Footer responsiveness */
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .footer-content a {
+    margin: 0.5rem;
   }
 }
 
