@@ -590,6 +590,13 @@ p {
     z-index: 999;
   }
 
+ .nav-links li {
+    display: block;
+    margin: 0; /* Ensure no extra spacing between items */
+    padding: 0; /* Remove default padding */
+  }
+
+
   .nav-links.mobile-visible {
     display: flex;
   }
@@ -610,10 +617,15 @@ p {
     opacity: 1;
     pointer-events: auto;
     transform: none;
+    padding-left: 0;
+    margin-top: 0;
   }
 
   .dropdown-content a {
     padding: 0.5rem 1rem;
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
 
   .dropdown-content a::after {
