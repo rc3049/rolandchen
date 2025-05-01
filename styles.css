@@ -81,7 +81,7 @@ a:hover {
   background-color: #fff;
   list-style: none;
   margin: 0;
-  padding: 0.6rem 0.5rem;
+  padding: 1rem 0.5rem;
   z-index: 1000;
   opacity: 0;
   pointer-events: none;
@@ -102,7 +102,7 @@ a:hover {
 .dropdown-content a {
   position: relative; /* Required for ::after positioning */
   display: inline-block;
-  padding: 0.5rem 0; /* vertical spacing between links */
+  padding: 0.3rem 0; /* vertical spacing between links */
   text-decoration: none;
   color: #000;
 }
