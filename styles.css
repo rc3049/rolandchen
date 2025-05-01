@@ -81,7 +81,7 @@ a:hover {
   background-color: #fff;
   list-style: none;
   margin: 0;
-  padding: 1.5rem 0.5rem;
+  padding: 0.5rem 1rem;
   z-index: 1000;
   opacity: 0;
   pointer-events: none;
