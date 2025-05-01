@@ -644,9 +644,8 @@ p {
     max-width: 100%;
     height: auto;
   }
-}
 
-    .nav-links {
+  .nav-links {
         display: none; /* Hide the navigation links by default */
         flex-direction: column; /* Stack links vertically */
         position: absolute;
