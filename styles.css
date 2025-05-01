@@ -127,7 +127,7 @@ a:hover {
 
 /* Hover Effect for the Dot */
 .dropdown-content a:hover::after {
-    width: 6.5px; /* Width of the dot when hovered */
+    width: 6px; /* Width of the dot when hovered */
     left: 50%; /* Ensures it remains centered */
 }
 
