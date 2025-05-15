@@ -443,6 +443,17 @@ p {
     border: none;
 }
 
+/* centred image styling */
+
+.centered-image {
+  display: block;           /* Removes inline spacing and allows margin auto to work */
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;              /* Takes full width of its container */
+  max-width: 1500px;        /* But no more than 1500px */
+  height: auto;             /* Maintains aspect ratio */
+}
+
 /* Styling only for #video-photo-grid */
 #video-photo-grid {
   display: grid;
