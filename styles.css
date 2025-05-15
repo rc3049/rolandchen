@@ -447,8 +447,9 @@ p {
 
 .centered-image {
   display: block;           /* Removes inline spacing and allows margin auto to work */
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 1.5rem;
   width: 100%;              /* Takes full width of its container */
   max-width: 1500px;        /* But no more than 1500px */
   height: auto;             /* Maintains aspect ratio */
