@@ -675,6 +675,7 @@ p {
     transform: none;
     padding-left: 0;
     margin-top: 0;
+    box-shadow: 6px 6px 0 black; /* <-- Added shadow */
   }
 
   .dropdown-content a {
