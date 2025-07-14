@@ -49,6 +49,48 @@ a:hover {
     list-style: none;
 }
 
+/* Sweep background animation */
+.sweep {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: fuchsia;
+  transform: translateY(-100%);
+  animation: sweepDown 1.5s ease-in-out forwards;
+  z-index: 0;
+}
+
+@keyframes sweepDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Dual-colored title with white shadow */
+.brand a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  position: relative;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.brand a::before {
+  content: 'Roland Chen';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  color: white;
+  z-index: -1;
+}
+
+
 /* Hide the mobile menu toggle button by default (desktop view) */
 .mobile-menu-toggle {
   display: none;
